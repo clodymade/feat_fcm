@@ -41,16 +41,28 @@ This module is compatible with **Android 6.0 (API 23)** and above and uses **Jet
 
 ### **1. Add feat_fcm to Your Project**
 
-Include `feat_fcm` as a module in your project. Add the following to your `settings.gradle` file:
+To include `feat_fcm` via **JitPack**, follow these steps:
 
-```gradle
-include ':feat_fcm'
-```
+1. Add JitPack to your project-level `build.gradle` file:
 
-Then, add it as a dependency in your app module’s build.gradle file:
-```gradle
-implementation project(":feat_fcm")
-```
+    ```gradle
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    ```
+
+2. Add `feat_fcm` to your module-level `build.gradle` file:
+
+    ```gradle
+    dependencies {
+        implementation 'com.github.clodymade:feat_fcm:1.0.0'
+    }
+    ```
+
+3. Sync your project.
+
 
 ### **2. Permissions**
 
